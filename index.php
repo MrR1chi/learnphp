@@ -1,25 +1,15 @@
 <?php
-$test = 10;
-$test = 10 + 10;
-$test = 5 % 2;
-$test = 2 ** 3;// 2 to the power of 3
-$test = $test + 10;
-$test += 10;
-$test++;
-$test--;
-++$test;
---$test;
-$a = 1;
-$b = ++$a;
-var_dump($b, $a);
-$test = 10;
-$test = sin($test);
+$test = 'Hello';
+$test = 'hello' . 'world';
+$test .= '!!!!!';
+$test = $test . '!!!!!';
+$name = 'John';
+$age = 30;
+$test = $name . ' is ' . $age . ' years old.';
+$test = "$name is $age years old.";
+$test = "hello\n\nworld";
+$test = <<<END
+lol
+cool
+END;
 var_dump($test);
-#
-/**
- * 
- * 
- * 
- * 
- */
-
