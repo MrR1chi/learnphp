@@ -53,6 +53,7 @@ $box->hello = 'yolo';
 var_dump($box->yolo);
 $box->cool(1, 'lol', 42);
 $box(1, 'yes');
+
 $box= 1;
 var_dump($box);
 echo $box;
