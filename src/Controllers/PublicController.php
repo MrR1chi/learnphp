@@ -31,7 +31,7 @@ class PublicController {
                 'body' => 'Some World body 4',
             ],
         ];
-        include __DIR__ . '/../views/index.php';
+        include __DIR__ . '/../../views/index.php';
     }
 
     public function us() {
@@ -62,6 +62,34 @@ class PublicController {
                 'body' => 'Some U.S body 4',
             ],
         ];
-        include __DIR__ . '/../views/index.php';
+        include __DIR__ . '/../../views/us.php';
     }
+
+    public function tech() {
+    $title = 'Technology';
+
+    $posts = [
+        [
+            'title' => 'Artificial Intelligence Is Changing Technology',
+            'date' => 'October 1, 2026',
+            'author' => 'Ricardo',
+            'body' => 'Artificial intelligence is becoming more popular and is used in many modern applications.',
+        ],
+        [
+            'title' => 'New Smartphones Are Getting Smarter',
+            'date' => 'September 28, 2026',
+            'author' => 'Kopliman',
+            'body' => 'Modern smartphones are becoming faster and more powerful every year.',
+        ],
+        [
+            'title' => 'The Future of Web Development',
+            'date' => 'September 25, 2026',
+            'author' => 'Stepan',
+            'body' => 'Web technologies continue to develop and make websites faster and easier to use.',
+        ],
+    ];
+
+    include __DIR__ . '/../../views/tech.php';
 }
+}
+
