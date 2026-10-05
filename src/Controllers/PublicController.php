@@ -2,8 +2,10 @@
 
 namespace App\Controllers;
 
-class PublicController {
-    public function index() {
+class PublicController
+{
+    public function index()
+    {
         $title = 'World';
         $posts = [
             [
@@ -34,7 +36,8 @@ class PublicController {
         view('index', compact('title', 'posts'));
     }
 
-    public function us() {
+    public function us()
+    {
         $title = 'U.S';
         $posts = [
             [
@@ -62,34 +65,43 @@ class PublicController {
                 'body' => 'Some U.S body 4',
             ],
         ];
-            view('us', compact('posts'));
+        view('us', compact('posts'));
     }
 
-    public function tech() {
-    $title = 'Technology';
+    public function tech()
+    {
+        $title = 'Technology';
 
-    $posts = [
-        [
-            'title' => 'Artificial Intelligence Is Changing Technology',
-            'date' => 'October 1, 2026',
-            'author' => 'Ricardo',
-            'body' => 'Artificial intelligence is becoming more popular and is used in many modern applications.',
-        ],
-        [
-            'title' => 'New Smartphones Are Getting Smarter',
-            'date' => 'September 28, 2026',
-            'author' => 'Kopliman',
-            'body' => 'Modern smartphones are becoming faster and more powerful every year.',
-        ],
-        [
-            'title' => 'The Future of Web Development',
-            'date' => 'September 25, 2026',
-            'author' => 'Stepan',
-            'body' => 'Web technologies continue to develop and make websites faster and easier to use.',
-        ],
-    ];
+        $posts = [
+            [
+                'title' => 'Artificial Intelligence Is Changing Technology',
+                'date' => 'October 1, 2026',
+                'author' => 'Ricardo',
+                'body' => 'Artificial intelligence is becoming more popular and is used in many modern applications.',
+            ],
+            [
+                'title' => 'New Smartphones Are Getting Smarter',
+                'date' => 'September 28, 2026',
+                'author' => 'Kopliman',
+                'body' => 'Modern smartphones are becoming faster and more powerful every year.',
+            ],
+            [
+                'title' => 'The Future of Web Development',
+                'date' => 'September 25, 2026',
+                'author' => 'Stepan',
+                'body' => 'Web technologies continue to develop and make websites faster and easier to use.',
+            ],
+        ];
 
-    view('tech', compact('posts'));
+        view('tech', compact('posts'));
+    }
+
+    public function forms()
+    {
+        view('forms');
+    }
+
+    public function answer(){
+        dump($_GET, $_POST);
+    }
 }
-}
-
