@@ -11,4 +11,4 @@ Route::get('/tech', [PublicController::class, 'tech']);
 
 Route::get('/forms', [PublicController::class, 'forms']);
 
-Route::get('/answer', [PublicController::class, 'answer']);
+Route::post('/answer', [PublicController::class, 'answer']);
