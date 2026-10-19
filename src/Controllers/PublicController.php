@@ -3,16 +3,14 @@
 namespace App\Controllers;
 
 use App\DB;
+use App\Models\Post;
+use App\Models\User;
 
 class PublicController
 {
     public function index()
     {
-        $db = new DB();
-        $posts = $db->all('posts');
-        dump($posts);
-        $users = $db->all('users');
-        dump($users);
+        $posts = Post::all();
         $title = 'World';
         view('index', compact('title', 'posts'));
     }
