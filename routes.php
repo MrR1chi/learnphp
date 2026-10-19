@@ -2,6 +2,7 @@
 
 use App\Route;
 use App\Controllers\PublicController;
+use App\Controllers\PostController;
 
 Route::get('/', [PublicController::class, 'index']);
 
@@ -12,3 +13,6 @@ Route::get('/tech', [PublicController::class, 'tech']);
 Route::get('/forms', [PublicController::class, 'forms']);
 
 Route::post('/forms', [PublicController::class, 'answer']);
+
+Route::get('/admin/posts', [PostController::class, 'index']);
+
